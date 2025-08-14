@@ -1,6 +1,5 @@
 function showAlertSuccess() {
   document.getElementById("alert-success").classList.add("show");
-  
 }
 
 function showAlertError() {
@@ -9,7 +8,7 @@ function showAlertError() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.addEventListener("submit", function(event) {
+    document.getElementById("regBtn").addEventListener("click", function(event) {
         
         const nombre = document.getElementById("nombre").value.trim();
         const apellido = document.getElementById("apellido").value.trim();
