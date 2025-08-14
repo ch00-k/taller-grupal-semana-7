@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const terminos = document.getElementById("terminos").checked;
 
         if (nombre && apellido && email && password1 && password2 && terminos) {
+            if (password1.length < 6) {
+                showAlertError();
+                return;
+            }
             if (password1 === password2) {
                 showAlertSuccess();
             } else {
